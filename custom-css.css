@@ -14,6 +14,9 @@ your theme's stylesheet content.
 /* --- TO SEARCH BY LETTER, PRESS "COMMAND + F" --- */
 /* --- THEN TYPE THE LETTER SECTION (EX: $A$ OR $B$ ETC) --- */
 /* ---------- $A$ ---------- */
+.aboutusBOX0101,
+.aboutusBOX0201,
+.aboutusBOX0301,
 .aboutusBOX04 {
 	background-color: #fff;
 	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
@@ -21,12 +24,10 @@ your theme's stylesheet content.
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
-	width: 96%;
+	width: 88.7%;
 	float: left;
-	padding: 2%;
-	margin: .2% 0;
-	text-wrap: normal;
-	text-align: center;
+	padding: 5%;
+	margin: 1.7% 1% 0 0;
 }
 
 .aboutusBOX0401,
@@ -96,7 +97,6 @@ var {
 #content {
 	float: left;
 	width: 103.7%;
-	border: 0;
 }
 
 .contentPlaceholder {
@@ -182,7 +182,7 @@ h6 {
 
 #headimg {
 	clear: both;
-	margin: auto;
+	margin: auto auto .5%;
 }
 
 #headimg img {
@@ -233,10 +233,27 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 
 /*--- END HEALTHY ---*/
 .hentry {
+	border-bottom: 1px solid rgb(255,0,0);
+/* #e6e6e6 */
+	border-bottom: 1px solid rgba(255,0,0,0.8);
+/* box-shadow values: #c8c8c8, #000 */
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	-webkit-box-sizing: border-box;
+/* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;
+/* Firefox, other Gecko */
+	box-sizing: border-box;
+/* Opera/IE 8+ */
+	clear: both;
 	float: left;
-	position: relative;
-	padding: 0 0 0 1%;
 	margin: 0 0 2% .13%;
+	padding: 0 0 0 1%;
+	position: relative;
+	width: 100%;
 }
 
 /*--- HOMEPAGE ---*/
