@@ -264,8 +264,7 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 .homepageBOX02, 
 .homepageBOX03, 
 .homepageBOX04, 
-.homepageBOX05, 
-.homepageBOX06 {
+.homepageBOX05 {
 	background-color: #fff;
 	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
@@ -278,16 +277,29 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 	margin: 1.7% 1% 0 0;
 }
 
+.homepageBOX06 {
+	background-color: #fff;
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	border-color: #CCCCCC #999999 #666666;
+	border-style: solid;
+	border-width: 1px;
+	width: 88.7%;
+	float: left;
+	padding: 5%;
+	margin: 1.7% 1% 2% 0;
+}
+
 .homepageBOX0301 {
 	float: left;
-	width: 29%;
+	width: 25%;
 	margin: 2%;
-	padding: 5%;
+	padding: 2%;
 }
 
 .homepageBOX0302 {
 	float: left;
-	width: 31%;
+	width: 29%;
 	padding: 2%;
 }
 
