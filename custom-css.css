@@ -1,3 +1,5 @@
+@charset  "UTF-8";
+
 /*
 Welcome to Custom CSS!
 
@@ -14,6 +16,10 @@ your theme's stylesheet content.
 /* --- TO SEARCH BY LETTER, PRESS "COMMAND + F" --- */
 /* --- THEN TYPE THE LETTER SECTION (EX: $A$ OR $B$ ETC) --- */
 /* ---------- $A$ ---------- */
+.addtoany_content_bottom {
+	line-height: 50px;
+}
+
 .aboutusBOX0101,
 .aboutusBOX0201,
 .aboutusBOX0301,
@@ -24,6 +30,9 @@ your theme's stylesheet content.
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	width: 88.7%;
 	float: left;
 	padding: 5%;
@@ -53,6 +62,10 @@ your theme's stylesheet content.
 	border-style: solid;
 	border-width: 3px;
 	margin-left: 10%;
+}
+
+.addtoany_content_bottom {
+	line-height: 50px;
 }
 
 /* ---------- $B$ ---------- */
@@ -119,6 +132,9 @@ var {
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	width: 98%;
 	float: left;
 	padding: 5%;
@@ -134,6 +150,9 @@ var {
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	width: 98%;
 /*float:left;*/
 	padding: 1%;
@@ -161,14 +180,17 @@ var {
 
 .entry-header {
 	float: left;
-	width: 88.7%;
+	width: 89%;
 	background-color: #fff;
 	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
-	padding: 5%;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 1% 5%;
 	margin: 1% 1% 0 0;
 }
 
@@ -190,7 +212,48 @@ h5,
 h6 {
 	clear: both;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	margin-bottom: 26px;
+/* margin-bottom: 26px; */
+}
+
+h1,
+h2,
+h3 {
+/* line-height: 52px; */
+}
+
+h1 {
+/**
+	 * Don't compose without a scale.
+	 * See http://www.webtypography.net/Harmony_and_Counterpoint/Size/3.1.1/
+	 */
+	font-size: 48px;
+	font-size: 4.8rem;
+}
+
+h2 {
+	font-size: 36px;
+	font-size: 3.6rem;
+}
+
+h3 {
+	font-size: 28px;
+	font-size: 2.8rem;
+}
+
+h4 {
+	font-size: 22px;
+	font-size: 2.2rem;
+}
+
+h5 {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+h6 {
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: bold;
 }
 
 #headimg {
@@ -224,6 +287,9 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 	border-style: solid;
 	border-width: 2px;
 	border-color: #000000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 }
 
 .healthyBOX01,
@@ -261,6 +327,9 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 /* Firefox, other Gecko */
 	box-sizing: border-box;
 /* Opera/IE 8+ */
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	clear: both;
 	float: left;
 	margin: 0 0 2% .13%;
@@ -284,6 +353,9 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	width: 88.7%;
 	float: left;
 	padding: 5%;
@@ -297,6 +369,9 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	width: 88.7%;
 	float: left;
 	padding: 5%;
@@ -379,6 +454,9 @@ html {
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	width: 98%;
 	float: center;
 	padding: 1%;
@@ -397,53 +475,15 @@ html {
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	width: 98%;
 	float: center;
 	padding: 1%;
 	margin: 0;
 }
 
-/* --- TEMPORARILY COMMENTED OUT FOR EDITING PURPOSES ----
-.landingBOX0201, 
-.landingBOX0202 {
-	float: left;
-	width: 45%;
-	padding:1%;
-}
-.landingBOX0301,
-.landingBOX0302,
-.landingBOX0303 {
-	float: left;
-	width: 33%;
-	padding:1%;
-}
-.landingBOX0302,
-.landingBOX0303 a{
-	float: left;
-}
-.landingBOX0501,
-.landingBOX0502,
-.landingBOX0503 {
-	float: left;
-	width: 33%;
-	padding:1%;
-}
-.landingBOX0501,
-.landingBOX0502,
-.landingBOX0503 a{
-	float: left;
-}
-.landingBOX0601,
-.landingBOX0602 {
-	float: left;
-	width: 45%;
-	padding:1%;
-}
-.landingBOX0601,
-.landingBOX0602 a{
-	float: left;
-}
---- TEMPORARILY COMMENTED OUT FOR EDITING PURPOSES ---- */
 /* ---------- $M$ ---------- */
 #main {
 	clear: both;
@@ -756,6 +796,9 @@ pre {
 	-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
 	-moz-box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
 	box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 }
 
 .su-spoiler.landingBOX {
@@ -813,6 +856,9 @@ pre {
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	padding: 5%;
 	margin: 2% 0 4.5%;
 }
@@ -826,6 +872,9 @@ pre {
 	border-color: #CCCCCC #999999 #666666;
 	border-style: solid;
 	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	padding: 5%;
 	margin: 1% 1% 0 0;
 }
