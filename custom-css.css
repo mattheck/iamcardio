@@ -71,6 +71,19 @@ textarea {
 	text-rendering: optimizeLegibility;
 }
 
+#secondary,
+#secondary button,
+#secondary input,
+#secondary select,
+#secondary textarea,
+#tertiary,
+#tertiary button,
+#tertiary input,
+#tertiary select,
+#tertiary textarea {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
 /* ---------- $C$ ---------- */
 code,
 kbd,
@@ -182,7 +195,7 @@ h6 {
 
 #headimg {
 	clear: both;
-	margin: auto auto .5%;
+	margin: auto auto -3%;
 }
 
 #headimg img {
@@ -341,6 +354,17 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 	float: left;
 	margin-left: 4%;
 	margin-bottom: 2%;
+}
+
+html {
+	font-size: 62.5%;
+/* Define base font of 62.5% for convenient rem sizing. See http://snook.ca/archives/html_and_css/font-size-with-rem */
+	overflow-y: scroll;
+/* Eliminate Jumps in Horizontal Centering By Forcing a Scroll Bar: http://css-tricks.com/eliminate-jumps-in-horizontal-centering-by-forcing-a-scroll-bar/ */
+	-webkit-text-size-adjust: 100%;
+/* Control text size in Safari for iOS without disabling user zoom */
+	-ms-text-size-adjust: 100%;
+/* http://www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
 
 /*--- END HOMEPAGE ---*/
@@ -639,6 +663,19 @@ pre {
 #secondary {
 	width: 17.6%;
 	padding: 0 1% 1%;
+}
+
+#secondary,
+#secondary button,
+#secondary input,
+#secondary select,
+#secondary textarea,
+#tertiary,
+#tertiary button,
+#tertiary input,
+#tertiary select,
+#tertiary textarea {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 #secondary,
