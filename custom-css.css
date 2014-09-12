@@ -16,6 +16,30 @@ your theme's stylesheet content.
 /* --- TO SEARCH BY LETTER, PRESS "COMMAND + F" --- */
 /* --- THEN TYPE THE LETTER SECTION (EX: $A$ OR $B$ ETC) --- */
 /* ---------- $A$ ---------- */
+a,
+a:hover,
+a:active,
+a:focus {
+	color: rgb(255,0,0);
+/* #f00 */
+	color: rgba(255,0,0,1);
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;
+	background: rgb(255,0,0);
+/* #f00 */
+	background: rgba(255,0,0,1);
+}
+
+a:active,
+a:focus {
+	background: rgb(235,235,235);
+/* #ebebeb */
+	background: rgba(50,50,50,.1);
+}
+
 .addtoany_content_bottom {
 	line-height: 50px;
 }
@@ -125,22 +149,6 @@ var {
 	width: 103.7%;
 }
 
-.contentPlaceholder {
-	background-color: #fff;
-	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-	border-color: #CCCCCC #999999 #666666;
-	border-style: solid;
-	border-width: 1px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-	width: 98%;
-	float: left;
-	padding: 5%;
-	margin: 2% 1% 0;
-}
-
 /* ---------- $D$ ---------- */
 /* ---------- $E$ ---------- */
 .eduBOX {
@@ -212,6 +220,7 @@ h5,
 h6 {
 	clear: both;
 	font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+	color: red;
 /* margin-bottom: 26px; */
 }
 
@@ -292,6 +301,22 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 	border-radius: 4px;
 }
 
+.healthyBOX02 a:link {
+	color: #ff0000;
+}
+
+.healthyBOX02 a:visited {
+	color: #00ff00;
+}
+
+.healthyBOX02 a:hover {
+	color: #ff00ff;
+}
+
+.healthyBOX02 a:active {
+	color: #0000ff;
+}
+
 .healthyBOX01,
 .healthyBOX03,
 .healthyBOX04 {
@@ -345,90 +370,35 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 .homepageBOX01, 
 .homepageBOX02, 
 .homepageBOX03, 
-.homepageBOX04, 
-.homepageBOX05 {
-	background-color: #fff;
-	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-	border-color: #CCCCCC #999999 #666666;
-	border-style: solid;
-	border-width: 1px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-	width: 88.7%;
-	float: left;
-	padding: 5%;
-	margin: 1.7% 1% 0 0;
+.homepageBOX04, {
 }
 
-.homepageBOX06 {
-	background-color: #fff;
-	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-	border-color: #CCCCCC #999999 #666666;
-	border-style: solid;
-	border-width: 1px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-	width: 88.7%;
-	float: left;
-	padding: 5%;
-	margin: 1.7% 1% 2% 0;
+.homepageBOX02 .ivycat-post {
+	clear: none;
+	width: 33%;
 }
 
-.homepageBOX0301 {
-	float: left;
-	width: 25%;
-	margin: 2%;
-	padding: 2%;
+.homepageBOX02 .ivycat-post .entry-title {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 18px;
 }
 
+.homepageBOX0301,
 .homepageBOX0302 {
+	width: 50%;
 	float: left;
-	width: 29%;
-	padding: 2%;
 }
 
 .homepageBOX04 .ivycat-post {
 	clear: none;
-	width: 30%;
+	width: 33%;
 }
 
 .homepageBOX04 .ivycat-post .entry-title {
-	font-size: 18px !important;
+	font-size: 18px;
 	font-weight: bold;
-}
-
-.homepageBOX0501,
-.homepageBOX0502,
-.homepageBOX0503 {
-	float: left;
-	width: 220px;
-	margin: 2%;
-	padding: 5%;
-}
-
-.homepageBOX0601 {
-	width: 48%;
-	height: 90%;
-	float: left;
-	margin-left: 4%;
-}
-
-.homepageBOX0602 {
-	height: 45%;
-	float: left;
-	margin: 4%;
-	margin-bottom: 2%;
-}
-
-.homepageBOX0603 {
-	height: 45%;
-	float: left;
-	margin-left: 4%;
-	margin-bottom: 2%;
+	line-height: 18px;
 }
 
 html {
@@ -577,6 +547,22 @@ html {
 	background-image: -o-linear-gradient(90deg,rgba(221,51,51,1) 0.52%,rgba(173,39,39,1) 100%);
 	background-image: linear-gradient(0deg,rgba(221,51,51,1) 0.52%,rgba(173,39,39,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#dd3333',endColorstr='#ad2727');
+}
+
+.masterPagestyle {
+	background-color: #fff;
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	border-color: #CCCCCC #999999 #666666;
+	border-style: solid;
+	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	width: 89%;
+	float: left;
+	padding: 5%;
+	margin: 2% 0 0;
 }
 
 #masthead {
@@ -826,7 +812,7 @@ pre {
 }
 
 .three-columns #primary {
-	margin: .7% 2.9% 0 16.1%;
+	margin: .5% 2.9% 0 16.1%;
 }
 
 .three-columns #secondary {
@@ -847,6 +833,73 @@ pre {
 }
 
 /*--- END WELLNESS ---*/
+/*--- WIDGETS ---*/
+.widget-area {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.widget-area img {
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	box-shadow: 0 0 5px 1px #f1f1f1;
+	box-shadow: 0 0 5px 1px rgba(0,0,0,.1);
+}
+
+.widget-area .wp-smiley,
+.widget-area .wp-caption img {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.widget-area ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.widget-area ul ul {
+	padding-left: 26px;
+}
+
+.widget-area tfoot {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+.widget-area th,
+.widget-area td,
+.widget-area caption {
+	padding: 0;
+}
+
+.widget-area th,
+.widget-area td {
+	text-align: center;
+}
+
+.widget-area th {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+.widget-area tfoot td {
+	text-align: left;
+}
+
+.widget-area tfoot tr:hover {
+	background: none;
+}
+
+.widget-area tfoot #next {
+	text-align: right;
+}
+
+.widget-area caption {
+	line-height: 52px;
+}
+
 .widget {
 	float: left;
 	width: 100%;
@@ -863,6 +916,38 @@ pre {
 	margin: 2% 0 4.5%;
 }
 
+.widget-title {
+	font-size: 22px;
+/* like a default h4 */
+	font-size: 2.2rem;
+	font-style: normal;
+	line-height: 26px;
+}
+
+.widget_calendar .widget-title,
+.widget_calendar table {
+	margin-bottom: 0;
+}
+
+.widget_rss li {
+	margin: 0 0 26px;
+}
+
+.widget_rss li:last-of-type,
+.widget form {
+	margin-bottom: 0;
+}
+
+.widget_recent_comments td,
+td.recentcommentstexttop {
+	border-bottom: 0;
+	line-height: 1.5;
+	padding-bottom: 5px !important;
+	text-align: left;
+	vertical-align: top;
+}
+
+/*--- END WIDGETS ---*/
 .womenBOX01 {
 	float: left;
 	width: 89%;
@@ -1143,3 +1228,140 @@ Version: 1.0
 /* ---------- $Y$ ---------- */
 /* ---------- $Z$ ---------- */
 /* ---------------------------END: CUSTOM CSS LIBRARY ------------------------------- */
+/* do not sort, for testing */
+/* =Forms and Inputs
+-------------------------------------------------------------- */
+form {
+	float: left;
+	margin: 0 0 26px;
+	width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+	border: 1px solid rgb(230,230,230);
+/* #e6e6e6 */
+	border: 1px solid rgba(230,230,230,1);
+}
+
+button,
+input[ type="button" ],
+input[ type="reset" ],
+input[ type="submit" ] {
+	-webkit-appearance: button;
+/* Display element using platform-native styling. See http://css-tricks.com/almanac/properties/a/appearance/ */
+	background-color: rgb(247,247,247);
+/* #f7f7f7 */
+	background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(247,247,247,0.8)),to(rgba(215,215,215,0.8)));
+	background-image: -webkit-linear-gradient(rgba(247,247,247,0.8),rgba(215,215,215,0.8));
+	background-image: -moz-linear-gradient(rgba(247,247,247,0.8),rgba(215,215,215,0.8));
+	background-image: -ms-linear-gradient(rgba(247,247,247,0.8),rgba(215,215,215,0.8));
+	background-image: -o-linear-gradient(rgba(247,247,247,0.8),rgba(215,215,215,0.8));
+	background-image: linear-gradient(rgba(247,247,247,0.8),rgba(215,215,215,0.8));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f7f7f7',endColorstr='#d7d7d7');
+	border-color: rgb(231,231,231) rgb(215,215,215);
+	border-color: rgba(231,231,231,0.8) rgba(215,215,215,0.8);
+	-webkit-box-shadow: inset 0 1px 0 rgba(231,231,231,0.8), inset 0 2px 0 rgba(255,255,255,0.8), inset 0 -1px 0 rgba(199,199,199,0.8), 0 0 7px rgba(0,0,0,0.09);
+	-moz-box-shadow: inset 0 1px 0 rgba(231,231,231,0.8), inset 0 2px 0 rgba(255,255,255,0.8), inset 0 -1px 0 rgba(199,199,199,0.8), 0 0 7px rgba(0,0,0,0.09);
+	-ms-box-shadow: inset 0 1px 0 rgba(231,231,231,0.8), inset 0 2px 0 rgba(255,255,255,0.8), inset 0 -1px 0 rgba(199,199,199,0.8), 0 0 7px rgba(0,0,0,0.09);
+	-o-box-shadow: inset 0 1px 0 rgba(231,231,231,0.8), inset 0 2px 0 rgba(255,255,255,0.8), inset 0 -1px 0 rgba(199,199,199,0.8), 0 0 7px rgba(0,0,0,0.09);
+	box-shadow: inset 0 1px 0 rgba(231,231,231,0.8), inset 0 2px 0 rgba(255,255,255,0.8), inset 0 -1px 0 rgba(199,199,199,0.8), 0 0 7px rgba(0,0,0,0.09);
+	cursor: pointer;
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin: 1%;
+	padding: 1% 2%;
+}
+
+button:hover,
+input[ type="button" ]:hover,
+input[ type="reset" ]:hover,
+input[ type="submit" ]:hover {
+	background-color: rgb(231,231,231);
+/* e7e7e7 */
+	background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(231,231,231,0.8)),to(rgba(199,199,199,0.8)));
+	background-image: -webkit-linear-gradient(rgba(231,231,231,0.8),rgba(199,199,199,0.8));
+	background-image: -moz-linear-gradient(rgba(231,231,231,0.8),rgba(199,199,199,0.8));
+	background-image: -ms-linear-gradient(rgba(231,231,231,0.8),rgba(199,199,199,0.8));
+	background-image: -o-linear-gradient(rgba(231,231,231,0.8),rgba(199,199,199,0.8));
+	background-image: linear-gradient(rgba(231,231,231,0.8),rgba(199,199,199,0.8));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#e7e7e7',endColorstr='#c7c7c7');
+	border-color: rgb(215,215,215) rgb(199,199,199);
+	border-color: rgba(215,215,215,0.8) rgba(199,199,199,0.8);
+	-webkit-box-shadow: inset 0 1px 0 rgba(215,215,215,0.8), inset 0 2px 0 rgba(247,247,247,0.8), inset 0 -1px 0 rgba(183,183,183,0.8), 0 0 7px rgba(0,0,0,0.14);
+	-moz-box-shadow: inset 0 1px 0 rgba(215,215,215,0.8), inset 0 2px 0 rgba(247,247,247,0.8), inset 0 -1px 0 rgba(183,183,183,0.8), 0 0 7px rgba(0,0,0,0.14);
+	-ms-box-shadow: inset 0 1px 0 rgba(215,215,215,0.8), inset 0 2px 0 rgba(247,247,247,0.8), inset 0 -1px 0 rgba(183,183,183,0.8), 0 0 7px rgba(0,0,0,0.14);
+	-o-box-shadow: inset 0 1px 0 rgba(215,215,215,0.8), inset 0 2px 0 rgba(247,247,247,0.8), inset 0 -1px 0 rgba(183,183,183,0.8), 0 0 7px rgba(0,0,0,0.14);
+	box-shadow: inset 0 1px 0 rgba(215,215,215,0.8), inset 0 2px 0 rgba(247,247,247,0.8), inset 0 -1px 0 rgba(183,183,183,0.8), 0 0 7px rgba(0,0,0,0.14);
+}
+
+button:active,
+button:focus,
+input[ type="reset" ]:active,
+input[ type="reset" ]:focus,
+input[ type="button" ]:active,
+input[ type="button" ]:focus,
+input[ type="submit" ]:active,
+input[ type="submit" ]:focus {
+	background-color: rgb(215,215,215);
+/* #d7d7d7 */
+	background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(215,215,215,0.8)),to(rgba(183,183,183,0.8)));
+	background-image: -webkit-linear-gradient(rgba(215,215,215,0.8),rgba(183,183,183,0.8));
+	background-image: -moz-linear-gradient(rgba(215,215,215,0.8),rgba(183,183,183,0.8));
+	background-image: -ms-linear-gradient(rgba(215,215,215,0.8),rgba(183,183,183,0.8));
+	background-image: -o-linear-gradient(rgba(215,215,215,0.8),rgba(183,183,183,0.8));
+	background-image: linear-gradient(rgba(215,215,215,0.8),rgba(183,183,183,0.8));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#d7d7d7',endColorstr='#b7b7b7');
+	border-color: rgb(199,199,199) rgb(183,183,183);
+	border-color: rgba(199,199,199,0.8) rgba(183,183,183,0.8);
+	-webkit-box-shadow: inset 0 1px 0 rgba(199,199,199,0.8), inset 0 2px 0 rgba(240,240,240,0.8), inset 0 -1px 0 rgba(167,167,167,0.8), 0 0 7px rgba(0,0,0,0.19);
+	-moz-box-shadow: inset 0 1px 0 rgba(199,199,199,0.8), inset 0 2px 0 rgba(240,240,240,0.8), inset 0 -1px 0 rgba(167,167,167,0.8), 0 0 7px rgba(0,0,0,0.19);
+	-ms-box-shadow: inset 0 1px 0 rgba(199,199,199,0.8), inset 0 2px 0 rgba(240,240,240,0.8), inset 0 -1px 0 rgba(167,167,167,0.8), 0 0 7px rgba(0,0,0,0.19);
+	-o-box-shadow: inset 0 1px 0 rgba(199,199,199,0.8), inset 0 2px 0 rgba(240,240,240,0.8), inset 0 -1px 0 rgba(167,167,167,0.8), 0 0 7px rgba(0,0,0,0.19);
+	box-shadow: inset 0 1px 0 rgba(199,199,199,0.8), inset 0 2px 0 rgba(240,240,240,0.8), inset 0 -1px 0 rgba(167,167,167,0.8), 0 0 7px rgba(0,0,0,0.19);
+}
+
+input[ type="text" ],
+input[ type="password" ] {
+	margin-right: 2%;
+	max-width: 55%;
+	padding: 1%;
+}
+
+select {
+	max-width: 100%;
+}
+
+textarea {
+	overflow: auto;
+/* Remove default scrollbars in Internet Explorer. */
+	padding: 2%;
+	width: 96%;
+}
+
+input[ type="text" ]:focus,
+input[ type="password" ]:focus,
+textarea:focus {
+	border: 1px solid rgb(200,200,200);
+/* #c8c8c8 */
+}
+
+.comment-form-comment {
+/* WordPress Comment Form. */
+	margin-bottom: 13px;
+}
+
+.form-allowed-tags {
+/* Allowed HTML tags in WordPress Comment Form. */
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin-bottom: 13px;
+	padding: 1%;
+}
+
+.form-allowed-tags code {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
