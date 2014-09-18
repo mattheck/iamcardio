@@ -76,6 +76,7 @@ function able_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
+		'header'  => __( 'Header Menu', 'able' ),
 		'primary' => __( 'Primary Menu', 'able' ),
 		'footer'  => __( 'Footer Menu', 'able' ),
 	) );
@@ -119,22 +120,6 @@ add_action( 'after_setup_theme', 'able_register_custom_background' );
  * @since Able 1.0
  */
 function able_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Top Header', 'able' ),
-		'id'            => 'header-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Bottom Header', 'able' ),
-		'id'            => 'header-2',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
 	register_sidebar( array(
 		'name'          => __( 'Left Sidebar', 'able' ),
 		'id'            => 'sidebar-1',
@@ -217,19 +202,20 @@ require( get_template_directory() . '/inc/tweaks.php' );
  * Load Jetpack compatibility file.
  */
 require( get_template_directory() . '/inc/jetpack.php' );
-
 /*
-* Control excerpt length
+* More custom
 */
 function custom_excerpt_length( $length ) {
-	return 15;
+	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-/*
-* Add read more
-*/
-function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+function custom_excerpt_length( $length ) {
+    return (in_category( 'Nutrition' )) ? 55 : 65;
 }
-add_filter( 'excerpt_more', 'new_excerpt_more' );
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function custom_excerpt_more( $more ) {
+	return '...';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
