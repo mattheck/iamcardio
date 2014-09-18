@@ -202,21 +202,12 @@ require( get_template_directory() . '/inc/tweaks.php' );
  * Load Jetpack compatibility file.
  */
 require( get_template_directory() . '/inc/jetpack.php' );
-
 /*
 * More custom
 */
-
 function custom_excerpt_length( $length ) {
-	if { in_category( 'Nutrition' )
-		return 65;
-} 
-	else {
-		return 20;
-
-}	
+    return 20;
 }
-
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function custom_excerpt_more( $more ) {
