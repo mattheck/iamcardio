@@ -16,12 +16,15 @@ your theme's stylesheet content.
 /* --- TO SEARCH BY LETTER, PRESS "COMMAND + F" --- */
 /* --- THEN TYPE THE LETTER SECTION (EX: $A$ OR $B$ ETC) --- */
 /* ---------- $A$ ---------- */
+/*-- commented out per Paul request
 a,
 a:hover,
 a:active,
 a:focus {
 	color: rgb(255,0,0);
+*/
 /* #f00 */
+/*
 	color: rgba(255,0,0,1);
 	text-decoration: none;
 }
@@ -29,40 +32,25 @@ a:focus {
 a:hover {
 	color: #fff;
 	background: rgb(255,0,0);
+*/
 /* #f00 */
+/*
 	background: rgba(255,0,0,1);
 }
 
 a:active,
 a:focus {
 	background: rgb(235,235,235);
+*/
 /* #ebebeb */
+/*
 	background: rgba(50,50,50,.1);
 }
 
 .addtoany_content_bottom {
 	line-height: 50px;
 }
-
-.aboutusBOX0101,
-.aboutusBOX0201,
-.aboutusBOX0301,
-.aboutusBOX04 {
-	background-color: #fff;
-	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-	border-color: #CCCCCC #999999 #666666;
-	border-style: solid;
-	border-width: 1px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-	width: 88.7%;
-	float: left;
-	padding: 5%;
-	margin: 1.7% 1% 0 0;
-}
-
+*/
 .aboutusBOX0401,
 .aboutusBOX0402,
 .aboutusBOX0403,
@@ -76,7 +64,7 @@ a:focus {
 	height: 185px;
 	padding: .5%;
 	background-color: #fff;
-	margin: 6% 3% 3% 4%;
+	margin: 4% 2% 2%;
 	float: left;
 }
 
@@ -84,7 +72,8 @@ a:focus {
 	width: 160px;
 	height: 160px;
 	border-style: solid;
-	border-width: 3px;
+	border-width: 1px;
+	border-color: #ff0000;
 	margin-left: 10%;
 }
 
@@ -131,10 +120,9 @@ var {
 	font-size: 1.3rem;
 }
 
-#colophon {
 /* Footer */
-	text-align: center;
-	clear: both;
+#colophon {
+	padding: 0;
 }
 
 .conditionsBOX0201,
@@ -146,7 +134,7 @@ var {
 
 #content {
 	float: left;
-	width: 103.7%;
+	width: 100%;
 }
 
 /* ---------- $D$ ---------- */
@@ -199,7 +187,20 @@ var {
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
 	padding: 1% 5%;
-	margin: 1% 1% 0 0;
+	margin: 2.8% 1% 0 0;
+}
+
+entry-summary {
+	text-align: center;
+}
+
+.entry-title {
+	text-align: center;
+}
+
+.entry-title a {
+	text-align: center;
+	color: #ff0000;
 }
 
 .entry-content {
@@ -207,6 +208,48 @@ var {
 
 /* ---------- $F$ ---------- */
 .featured-image {
+	text-align: center;
+}
+
+.featured-image {
+	margin: 0;
+}
+
+.float-left {
+	float: left;
+}
+
+.footer-navigation {
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+.footer-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-navigation li {
+	float: left;
+	position: relative;
+}
+
+.footer-navigation a {
+	border-right: 1px solid rgb(200,200,200);
+/* #c8c8c8 */
+	border-right: 1px solid rgba(200,200,200,.8);
+	display: block;
+	padding: 0 8px 0 6px;
+}
+
+.footer-navigation li:first-child a {
+	padding: 0 8px 0 0;
+}
+
+.footer-navigation li:last-child a {
+	border: none;
+	padding: 0 0 0 6px;
 }
 
 /* ---------- $G$ ---------- */
@@ -265,9 +308,58 @@ h6 {
 	font-weight: bold;
 }
 
+.header-navigation {
+	font-size: 13px;
+	font-size: 1.3rem;
+	margin: 0;
+	width: 25%;
+	text-align: center;
+	float: right;
+}
+
+.header-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header-navigation li {
+	float: left;
+	position: relative;
+}
+
+.header-navigation a {
+	border-right: 1px solid rgb(200,200,200);
+/* #c8c8c8 */
+	border-right: 1px solid rgba(200,200,200,.8);
+	display: block;
+	padding: 0 8px 0 6px;
+	text-align: center;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 31px;
+	float: right;
+/* display: inline-block; */
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: Arial, "Trebuchet MS", Helvetica, sans-serif;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+
+.header-navigation li:first-child a {
+	padding: 0 8px 0 0;
+}
+
+.header-navigation li:last-child a {
+	border: none;
+	padding: 0 0 0 6px;
+}
+
 #headimg {
 	clear: both;
-	margin: auto auto -3%;
+	margin: auto;
 }
 
 #headimg img {
@@ -283,13 +375,12 @@ h6 {
 
 /*--- END HEADINGS ---*/
 /*--- HEALTHY ---*/
-.healthyBOX {
+/*.healthyBOX {
 	width: 98%;
 	background-color: #ffffff;
 	float: left;
 	margin-top: 10px;
-}
-
+}*/
 /*!!!
 Temporary styling to outline banner, need to center banner within healthyBOX div !!! */
 .healthyBOX01 {
@@ -320,8 +411,8 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 .healthyBOX01,
 .healthyBOX03,
 .healthyBOX04 {
-	width: 98% !important;
-	background-color: #ffffff !important;
+	width: 98%;
+	background-color: #ffffff;
 	float: left;
 	margin: 0 0 0 3%;
 }
@@ -337,9 +428,9 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 
 /*--- END HEALTHY ---*/
 .hentry {
-	border-bottom: 1px solid rgb(255,0,0);
+	border-bottom: 0 solid rgb(255,0,0);
 /* #e6e6e6 */
-	border-bottom: 1px solid rgba(255,0,0,0.8);
+	border-bottom: 0 solid rgba(255,0,0,0.8);
 /* box-shadow values: #c8c8c8, #000 */
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
@@ -367,18 +458,22 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 .homepageBOX {
 }
 
-.homepageBOX01, 
 .homepageBOX02, 
-.homepageBOX03, 
-.homepageBOX04, {
+.homepageBOX03 {
+}
+
+.homepageBOX01 {
+	margin: 0;
 }
 
 .homepageBOX02 .ivycat-post {
 	clear: none;
-	width: 33%;
+	width: 28%;
+	margin: 0 2%;
 }
 
-.homepageBOX02 .ivycat-post .entry-title {
+.homepageBOX02 .ivycat-post .entry-title,
+.homepageBOX04 .ivycat-post .entry-title {
 	font-size: 18px;
 	font-weight: bold;
 	line-height: 18px;
@@ -392,13 +487,18 @@ Temporary styling to outline banner, need to center banner within healthyBOX div
 
 .homepageBOX04 .ivycat-post {
 	clear: none;
-	width: 33%;
+	width: 40%;
+	margin: 0 2%;
 }
 
-.homepageBOX04 .ivycat-post .entry-title {
-	font-size: 18px;
-	font-weight: bold;
-	line-height: 18px;
+.homepageBOX04 .featured-image {
+	margin-left: 17%;
+}
+
+.homepageBOX0401,
+.homepageBOX0402,
+.homepageBOX0403,
+.homepageBOX0404 {
 }
 
 html {
@@ -461,11 +561,15 @@ html {
 	zoom: 1;
 }
 
-.main-navigation,
+/*.main-navigation,
 .menu-toggle {
+*/
 /* Small menu */
+/*
 	background-color: rgba(241,241,241,0.7);
+*/
 /* #f1f1f1 */
+/*
 	background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.2)),to(rgba(241,241,241,0.2)));
 	background-image: -webkit-linear-gradient(rgba(255,255,255,0.2),rgba(241,241,241,0.2));
 	background-image: -moz-linear-gradient(rgba(255,255,255,0.2),rgba(241,241,241,0.2));
@@ -479,6 +583,7 @@ html {
 	font-size: 13px;
 	font-size: 2rem;
 	margin: 0;
+	width: 1310px;
 }
 
 .main-navigation ul,
@@ -518,10 +623,14 @@ html {
 
 .main-navigation ul ul {
 	background: rgb(241,241,241);
+*/
 /* #f1f1f1 */
+/*
 	background: rgba(241,241,241,.95);
 	-webkit-box-shadow: 2px 2px 0 0 rgba(0,0,0,.1);
+*/
 /* #000 */
+/*
 	box-shadow: 2px 2px 0 0 rgba(0,0,0,.1);
 	display: none;
 	float: left;
@@ -539,7 +648,9 @@ html {
 .main-navigation .current_page_item > a,
 .main-navigation .current_page_ancestor > a {
 	background-color: rgb(215,215,215);
+*/
 /* #d7d7d7 */
+/*
 	background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(221,51,51,1)),to(rgba(173,39,39,1)));
 	background-image: -webkit-linear-gradient(90deg,rgba(221,51,51,1) 0.52%,rgba(173,39,39,1) 100%);
 	background-image: -moz-linear-gradient(90deg,rgba(221,51,51,1) 0.52%,rgba(173,39,39,1) 100%);
@@ -547,8 +658,7 @@ html {
 	background-image: -o-linear-gradient(90deg,rgba(221,51,51,1) 0.52%,rgba(173,39,39,1) 100%);
 	background-image: linear-gradient(0deg,rgba(221,51,51,1) 0.52%,rgba(173,39,39,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#dd3333',endColorstr='#ad2727');
-}
-
+}*/
 .masterPagestyle {
 	background-color: #fff;
 	-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
@@ -562,12 +672,12 @@ html {
 	width: 89%;
 	float: left;
 	padding: 5%;
-	margin: 2% 0 0;
+	margin: 1.35% 0 0;
 }
 
 #masthead {
 	float: left;
-	margin: 0;
+	margin: 0 0 -2.6% -1.45%;
 	width: 100%;
 }
 
@@ -584,6 +694,10 @@ html {
 	-webkit-border-radius: 3px 3px 3px 3px;
 	border-radius: 3px 3px 3px 3px;
 	font-size: 2rem;
+}
+
+.menu-left-sidebar-menu-container a {
+	color: #ff0000;
 }
 
 /* ---------- $N$ ---------- */
@@ -613,6 +727,10 @@ html {
 	margin: 0 0 26px;
 }
 
+#post-28 {
+	margin-top: -1.8%;
+}
+
 .post-edit-link {
 	background-color: rgb(240,240,240);
 /* #f0f0f0 */
@@ -640,6 +758,18 @@ html {
 	top: 39px;
 	right: 26px;
 	text-decoration: none;
+}
+
+#post-28 {
+	margin-top: .75%;
+}
+
+#post-24 {
+	margin-left: -17.6%;
+}
+
+.post-24 {
+	margin-left: -17.6%;
 }
 
 pre {
@@ -752,6 +882,14 @@ pre {
 	margin-bottom: 0;
 }
 
+.srp-thumbnail-box {
+	height: 100px;
+}
+
+.srp-content-box h6 {
+	padding: 1% 0;
+}
+
 .su-spoiler,
 .su-spoiler-style-default,
 .su-spoiler-icon-plus,
@@ -806,17 +944,17 @@ pre {
 
 /* ---------- $T$ ---------- */
 #tertiary {
-	margin: 1% 0 0 -1.2%;
+	margin: .91% 0 0 -3.5%;
 	width: 19.7%;
 	padding: 0 1% 1%;
 }
 
 .three-columns #primary {
-	margin: .5% 2.9% 0 16.1%;
+	margin: -.5% 2.9% 0 16%;
 }
 
 .three-columns #secondary {
-	margin: 1% 0 0 -84%;
+	margin: .99% 0 0 -83.812%;
 }
 
 /* ---------- $U$ ---------- */
@@ -913,7 +1051,7 @@ pre {
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
 	padding: 5%;
-	margin: 2% 0 4.5%;
+	margin: 2% 0 3%;
 }
 
 .widget-title {
@@ -922,6 +1060,8 @@ pre {
 	font-size: 2.2rem;
 	font-style: normal;
 	line-height: 26px;
+/*custom addition ALEX*/
+	margin-bottom: 1.25%;
 }
 
 .widget_calendar .widget-title,
@@ -975,12 +1115,42 @@ td.recentcommentstexttop {
 	text-align: center;
 }
 
+/* --- SIGN-IN WIDGET --- */
+#wp-email-capture-email-widget {
+	margin: .5% 0;
+/* width: ??? */
+}
+
+#wp-email-capture-name-widget {
+	margin: .5% 0;
+/* width: ??? */
+}
+
+.wp-email-capture-email,
+.wp-email-capture-label,
+.wp-email-capture-widget-worldwide,
+.wp-email-capture-email-widget,
+.wp-email-capture-email-label
+.wp-email-capture-email-label-widget {
+	width: 100%;
+}
+
+.wp-email-capture-name,
+.wp-email-capture-input,
+.wp-email-capture-widget-worldwide,
+.wp-email-capture-name-widget,
+.wp-email-capture-name-input,
+.wp-email-capture-name-input-widget {
+	width: 100%;
+}
+
+/* --- END SIGN-IN WIDGET --- */
 /*
 Plugin Name: WP Tab Widget
 Author: MyThemeShop
 Author URI: mythemeshop.com
 Version: 1.0
-*/
+
 .wpt_widget_content {
 	position: relative;
 }
@@ -1141,7 +1311,7 @@ Version: 1.0
 .wpt_widget_content .wp-post-image {
 	margin: 0 !important;
 }
-
+*/
 /* Comments */
 .wpt_avatar {
 	margin-right: 10px;
