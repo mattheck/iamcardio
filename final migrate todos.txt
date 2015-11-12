@@ -1,0 +1,34 @@
+Step 3: Test Site
+
+IMPORTANT FINAL STEPS!
+1. Install Report	Errors: Deploy (0)   Update (3)     Warnings: (1)
+2. Save Permalinks	Updates URL rewrite rules in .htaccess (requires login)
+3. Test Site	Validate all pages, links images and plugins
+4. File Cleanup	Removes all installer files (requires login)
+
+To re-install start over at step 1.
+The .htaccess file was reset. Resave plugins that write to this file.
+Database Results
+Tables	Rows	Cells
+Created	75	33238	n/a
+Scanned	75	32951	234965
+Updated	8	20400	22375
+Errors & Warnings
+(click links below to view details)
+Step1: Deploy Errors (0)
+Step2: Update Errors (3)	General Warnings (1)
+STEP2: UPDATE ERRORS (0)
+Errors that show here are the result of queries that could not be performed.
+No MySQL query errors found
+TABLE KEY ERRORS (3)
+A primary key is required on a table to efficiently run the update engine. Below is a list of tables and the rows that will need to be manually updated. Use the query below to find the data.
+SELECT @row := @row + 1 as row, t.* FROM some_table t, (SELECT @row := 0) r
+Row [3] on Table [wp_ntuu_searchmeter_recent] requires a manual update.
+Row [4] on Table [wp_ntuu_searchmeter_recent] requires a manual update.
+Row [5] on Table [wp_ntuu_searchmeter_recent] requires a manual update.
+SERIALIZATION ERRORS (0)
+Use the SQL below to display data that may have not been updated correctly during the serialization process.
+No serialization errors found
+GENERAL WARNINGS
+The following is a list of warnings that may need to be fixed in order to finalize your setup. For more details about warnings see the wordpress codex..
+WP-CONFIG WARNING: The wp-config.php has one or more of these values "WP_CONTENT_DIR, WP_CONTENT_URL, WPCACHEHOME, COOKIE_DOMAIN, WP_SITEURL, WP_HOME, WP_TEMP_DIR" which may cause issues please validate these values by opening the file.
