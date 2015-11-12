@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*!
  * Isotope PACKAGED v2.0.1
  * Filter & sort magical layouts
@@ -3923,3 +3924,18 @@ if ( typeof define === 'function' && define.amd ) {
 
 })( window );
 
+=======
+$( function() {
+  // init Isotope
+  var $container = $('.isotope').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows'
+  });
+  // filter functions
+  var filterFns = {
+    // show if number is greater than 50
+    numberGreaterThan50: function() {
+      var number = $(this).find('.number').text();
+      return parseInt( number, 10 ) > 50;
+    },
+>>>>>>> apple-styles

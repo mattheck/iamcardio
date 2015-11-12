@@ -30,19 +30,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<?php if ( has_nav_menu( 'header' ) ) : ?>
-				<nav role="navigation" class="site-navigation header-navigation">
-					<h1 class="assistive-text">
-						<?php _e( 'Menu', 'able' ); ?>
-					</h1>
-
-					<?php wp_nav_menu( array( 'theme_location' => 'header', 'depth' => 1 ) ); ?>
-				</nav><!-- .site-navigation -->
-			<?php endif; ?>
-	<div id="site-introduction">
-		<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-	</div><!-- #site-title -->
+	
 	<div id="page-liner">
 		<header id="masthead" class="site-header" role="banner">
 			<?php $header_image = get_header_image();
@@ -53,6 +41,10 @@
 				</a>
 			</div><!-- #headimg -->
 			<?php } // if ( ! empty( $header_image ) ) ?>
+			<div id="site-introduction">
+				<h2 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
+				<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
+			</div><!-- #site-title -->
 
 			<nav role="navigation" class="site-navigation main-navigation">
 				<h1 class="assistive-text"><?php _e( 'Menu', 'able' ); ?></h1>
