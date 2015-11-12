@@ -1,0 +1,42 @@
+Reset
+Accessibility
+Links
+Headings
+Typography
+Lists
+Tables
+Forms and Inputs
+Embeds
+Images
+Responsive Galleries
+Page Structure
+Header
+Site Navigation
+Navigation Menu
+Right Side Menu
+Entries
+Sticky Posts
+Comments TODO
+Archives
+Search
+Sidebars
+Widgets
+Footer
+WordPress.com Twitter Widget
+WordPress.com Milestone Widget
+WordPress.com Widget Overrides
+WordPress.com Stats Smiley
+WordPress.com Sharing
+WordPress.com/Polldaddy Polls
+WordPress.com Digg Button
+WordPress.com Follow
+Jetpack Carousel
+SyntaxHighlighter Styles
+VideoPress Styles
+Tiled Galleries
+Infinite Scroll
+Media Queries
+Posts
+Home
+Meet Our Team
+Featured Cardiologist

@@ -1,0 +1,100 @@
+/*
+Welcome to Custom CSS!
+
+CSS (Cascading Style Sheets) is a kind of code that tells the browser how
+to render a web page. You may delete these comments and get started with
+your customizations.
+
+By default, your stylesheet will be loaded after the theme stylesheets,
+which means that your rules can take precedence and override the theme CSS
+rules. Just write here what you want to change, you don't need to copy all
+your theme's stylesheet content.
+*/
+/* Styling Staged For Review - Approval - and Transfer to Edit CSS */
+/*** code now in style.css "code in progress" section at end. The reason for this is so that mobile-compatible setting for custom-css can be enabled so that mobile customization is possible. ***/
+#header-img > a > img {
+  margin-bottom: -10%;
+}
+
+#menu-item-3360 > ul {
+  width: 24%;
+}
+
+#loginwithajaxwidget-5 > div > form.lwa-form > div > table > tbody > tr.lwa-username {
+  background-color: transparent;
+}
+
+#loginwithajaxwidget-5 > div > form.lwa-form > div > table > tbody > tr.lwa-password {
+  background-color: transparent;
+}
+
+#loginwithajaxwidget-5 > div > form.lwa-form > div > table > tbody > tr:nth-child(3) {
+  background-color: transparent;
+}
+
+#loginwithajaxwidget-5 > div > form.lwa-form > div > table > tbody > tr.lwa-submit {
+  background-color: transparent;
+}
+
+#wrapper > div.menu-search {
+  background: #d33;
+}
+
+.search-form #s {
+  background: #c42d2d;
+/*border: 1px solid gray;*/
+}
+
+.nav-previous a, .nav-next a {
+  background: #d33;
+}
+
+#access > h3 {
+  display: inherit;
+}
+
+#ubermenu-main-132-primary {
+  margin-bottom: 1.3%;
+}
+
+#loginwithajaxwidget-5 > div > table > tbody > tr {
+  background-color: transparent;
+}
+
+.ubermenu-responsive-toggle {
+  clear: both;
+}
+
+#tertiary > aside.widget.widget-container.adsns_widget > h1 {
+  display: none;
+}
+
+#tertiary > aside.widget.widget-container.adsns_widget,
+#text-10 {
+  border-radius: 0;
+  box-shadow: 0 0 0 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+#tertiary > aside.widget.widget-container.adsns_widget {
+  height: 190px;
+}
+
+#aswift_1 {
+  width: 99.5%;
+}
+
+#aswift_0 {
+  width: 96%;
+  height: 75%;
+}
+
+#text-10 {
+  margin-bottom: .8%;
+}
+
+#text-7 > div > a > img {
+  width: 69%;
+  margin-left: 15.6%;
+}

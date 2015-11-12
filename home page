@@ -1,0 +1,25 @@
+Home
+
+<div class="homepageBOX">
+<div class="homepageBOX01">
+<div class="masterPagestyle homepageBOX0101">[rev_slider home]</div>
+<div class="masterPagestyle homepageBOX0102">
+ISOTOPE FILTER CRITERION GO HERE
+</div>
+<div class="homepageBOX03 masterPagestyle">
+<div class="contentProxy cP01 outer">
+<div class="cP00 inner"><div class="text">CONTENT HERE</div></div></div>
+<div class="contentProxy cP02 outer">
+<div class="cP00 inner"><div class="text">CONTENT HERE</div></div></div>
+<div class="contentProxy cP03 outer">
+<div class="cP00 inner"><div class="text">CONTENT HERE</div></div></div>
+</div>
+<div class="homepageBOX04 masterPagestyle">
+<div class="contentProxy cP04 outer">
+<div class="cP00 inner"><div class="text">CONTENT HERE</div></div></div>
+<div class="contentProxy cP05 outer">
+<div class="cP00 inner"><div class="text">CONTENT HERE</div></div></div>
+<div class="contentProxy cP06 outer">
+<div class="cP00 inner"><div class="text">CONTENT HERE</div></div></div>
+</div>
+</div>
