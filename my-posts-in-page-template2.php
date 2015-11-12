@@ -1,5 +1,4 @@
-<!-- NOTE: If you need to make changes to this file, copy it to your current theme's main
-	directory so your changes won't be overwritten when the plugin is upgraded. -->
+<!-- 1 Big Left, 2 Stacked Right -->
 
 <!-- Start of Post Wrap -->
 <div class="post hentry ivycat-post">

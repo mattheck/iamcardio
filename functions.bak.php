@@ -120,22 +120,6 @@ add_action( 'after_setup_theme', 'able_register_custom_background' );
  */
 function able_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Top Header', 'able' ),
-		'id'            => 'header-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Bottom Header', 'able' ),
-		'id'            => 'header-2',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-	register_sidebar( array(
 		'name'          => __( 'Left Sidebar', 'able' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -151,9 +135,41 @@ function able_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
-}
-add_action( 'widgets_init', 'able_widgets_init' );
+	register_sidebar(array(
+		'name' => 'Extra Widget Before Header',
+		'id' => 'extra-widget',
+		'description' => 'Extra Widget Before Header',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>'
+	));
+	register_sidebar(array(
+	'name' => 'Extra Widget After Header',
+	'id' => 'extra-widget-2',
+	'description' => 'Extra Widget After Header',
+	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h2>',
+	'after_title' => '</h2>'
+	));
 
+
+}
+
+add_action( 'widgets_init', 'able_widgets_init' );
+add_filter ('_before_header', 'add_my_widget');
+	function add_my_widget() {
+		if (function_exists('dynamic_sidebar')) {
+			dynamic_sidebar('Extra Widget Before Header');
+			}
+}
+add_filter ('_before_navbar', 'add_my_widget');
+	function add_my_widget() {
+		if (function_exists('dynamic_sidebar')) {
+			dynamic_sidebar('Extra Widget Before Navbar');
+			}
+}
 /**
  * Enqueue scripts and styles
  *
@@ -217,19 +233,3 @@ require( get_template_directory() . '/inc/tweaks.php' );
  * Load Jetpack compatibility file.
  */
 require( get_template_directory() . '/inc/jetpack.php' );
-
-/*
-* Control excerpt length
-*/
-function custom_excerpt_length( $length ) {
-	return 15;
-}
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
-/*
-* Add read more
-*/
-function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
-}
-add_filter( 'excerpt_more', 'new_excerpt_more' );

@@ -33,6 +33,16 @@
 	
 	<div id="page-liner">
 		<header id="masthead" class="site-header" role="banner">
+			<?php if ( is_active_sidebar( 'header-1' ) ) : ?>
+				<div id="quaternary" class="widget-area" role="complementary">
+					<?php dynamic_sidebar( 'header-1' ); ?>
+				</div><!-- #quaternary -->
+			<?php endif; ?>
+			<?php if ( is_active_sidebar( 'header-2' ) ) : ?>
+				<div id="quinary" class="widget-area" role="complementary">
+					<?php dynamic_sidebar( 'header-2' ); ?>
+				</div><!-- #quinary -->
+			<?php endif; ?>
 			<?php $header_image = get_header_image();
 			if ( ! empty( $header_image ) ) { ?>
 			<div id="headimg">

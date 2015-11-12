@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Left sidebar only
- * Description: A template with only the left sidebar
+ * Template Name: Full-width, no sidebar
+ * Description: A full-width template with no sidebar
  *
  * @package Able
  * @since Able 1.0
@@ -23,5 +23,4 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary .site-content -->
 
-<?php get_sidebar(left); ?>
 <?php get_footer(); ?>

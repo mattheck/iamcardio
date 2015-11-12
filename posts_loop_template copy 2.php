@@ -3,11 +3,6 @@
 
 <!-- Start of Post Wrap -->
 <div class="post hentry ivycat-post">
-	<!-- This will output of the featured image thumbnail  -->
-	<div class="featured-image">
-		<?php the_post_thumbnail( 'thumbnail' ); ?>
-	</div>	
-
 	<!-- This is the output of the post TITLE -->
 	<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
@@ -16,7 +11,7 @@
 		<?php the_excerpt(); ?>
 	</div>
 
-	<!-- This is the output of the META information 
+	<!-- This is the output of the META information -->
 	<div class="entry-utility">
 		<?php if ( count( get_the_category() ) ) : ?>
 			<span class="cat-links">
@@ -35,6 +30,6 @@
 		<?php endif; ?>
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?></span>
 		<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-	</div> -->
+	</div>
 </div>
 <!-- // End of Post Wrap -->

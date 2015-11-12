@@ -76,6 +76,7 @@ function able_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
+		'header'  => __( 'Header Menu', 'able' ),
 		'primary' => __( 'Primary Menu', 'able' ),
 		'footer'  => __( 'Footer Menu', 'able' ),
 	) );
@@ -119,22 +120,6 @@ add_action( 'after_setup_theme', 'able_register_custom_background' );
  * @since Able 1.0
  */
 function able_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Top Header', 'able' ),
-		'id'            => 'header-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-	register_sidebar( array(
-		'name'          => __( 'Bottom Header', 'able' ),
-		'id'            => 'header-2',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
 	register_sidebar( array(
 		'name'          => __( 'Left Sidebar', 'able' ),
 		'id'            => 'sidebar-1',
@@ -217,19 +202,128 @@ require( get_template_directory() . '/inc/tweaks.php' );
  * Load Jetpack compatibility file.
  */
 require( get_template_directory() . '/inc/jetpack.php' );
-
 /*
-* Control excerpt length
+* More custom
 */
 function custom_excerpt_length( $length ) {
-	return 15;
+    return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-/*
-* Add read more
-*/
-function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+function custom_excerpt_more( $more ) {
+	return '...';
 }
-add_filter( 'excerpt_more', 'new_excerpt_more' );
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
+
+function recortar_texto( $texto_nuevo, $chars = 100 ) {
+    
+    $texto = trim(preg_replace('/\[.*?\]/', '', $texto_nuevo));
+    
+    if(strlen(trim($texto)) > $chars){
+        $texto = explode(' ', $texto);
+        
+        $palabra = "";
+        foreach($texto as $key => $value) {
+            if( (strlen($palabra) + strlen($value)) < $chars ) {
+                $palabra .= " ".trim($value);
+            }else{
+                break;
+            }
+        }
+        $palabra.="...";
+    }else{
+        $palabra = $texto;
+        $palabra .= "...";
+    }
+
+    return $palabra;
+}
+
+
+
+//color categories
+add_action('admin_init', 'z_init');
+function z_init() {
+    $z_taxonomies = get_taxonomies();
+
+
+    wp_enqueue_style( 'wp-color-picker' );
+        wp_enqueue_script(
+                    'iris',
+                    admin_url( 'js/iris.min.js' ),
+                    array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ),
+                    false,
+                    1
+                );
+        wp_enqueue_script( 'wp-color-picker' );
+
+    if (is_array($z_taxonomies)) {
+
+        $zci_options = get_option('zci_options');
+        if (empty($zci_options['excluded_taxonomies']))
+            $zci_options['excluded_taxonomies'] = array();
+        
+        foreach ($z_taxonomies as $z_taxonomy) {
+            if (in_array($z_taxonomy, $zci_options['excluded_taxonomies']))
+                continue;
+            add_action($z_taxonomy.'_add_form_fields', 'z_add_texonomy_field');
+            add_action($z_taxonomy.'_edit_form_fields', 'z_edit_texonomy_field');
+            //add_filter( 'manage_edit-' . $z_taxonomy . '_columns', 'z_taxonomy_columns' );
+            //add_filter( 'manage_' . $z_taxonomy . '_custom_column', 'z_taxonomy_column', 10, 3 );
+
+        }
+    }
+}
+
+// add image field in add form
+function z_add_texonomy_field() {
+    echo '<tr class="form-field">
+        <th scope="row" valign="top"><label for="taxonomy_image">Color</label></th>
+        <td>
+        <input type="text" name="cat_color" id="cat_color" class="color-picker" value="#f33e3e" />
+        </td>
+    </tr>';
+
+echo "<script>jQuery(document).ready(function($){
+                          $('.color-picker').iris();
+                        });</script>";
+}
+
+// add image field in edit form
+function z_edit_texonomy_field($taxonomy) {
+
+    if (get_bloginfo('version') >= 3.5)
+        wp_enqueue_media();
+    else {
+        wp_enqueue_style('thickbox');
+        wp_enqueue_script('thickbox');
+
+    }
+    $color = get_option("cat_color".$taxonomy->term_id);
+
+    $color = (isset($color))?$color:"#f33e3e";
+
+
+    echo '<tr class="form-field">
+        <th scope="row" valign="top"><label for="taxonomy_image">Color</label></th>
+        <td>
+        <input type="text" name="cat_color" id="cat_color" class="color-picker" value="'.$color.'" />
+         </td>
+    </tr>';
+
+    echo "<script>jQuery(document).ready(function($){
+                          $('.color-picker').iris();
+                        });</script>";
+
+}
+// save our taxonomy image while edit or save term
+add_action('edit_term','z_save_taxonomy_image');
+add_action('create_term','z_save_taxonomy_image');
+
+function z_save_taxonomy_image($term_id) 
+{
+    if(isset($_POST['cat_color'])){
+        update_option('cat_color'.$term_id, $_POST['cat_color']);
+    }
+
+}

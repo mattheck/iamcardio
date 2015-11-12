@@ -1,0 +1,26 @@
+Notes can come in all sorts of shapes and sizes. They vary, and their uses are completely up to the person writing the code. However, I try to keep things consistent in my code that way it's easy for the next person to read. So something like this might help...
+
+<?php
+
+//======================================================================
+// CATEGORY LARGE FONT
+//======================================================================
+
+//-----------------------------------------------------
+// Sub-Category Smaller Font
+//-----------------------------------------------------
+
+/* Title Here Notice the First Letters are Capitalized */
+
+# Option 1
+# Option 2
+# Option 3
+
+/*
+* This is a detailed explanation
+* of something that should require
+* several paragraphs of information.
+*/
+
+// This is a single line quote.
+?>
